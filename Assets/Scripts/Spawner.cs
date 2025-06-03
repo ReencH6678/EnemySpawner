@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private Vector3 _enemyMoveDirection;
     [SerializeField] private Enemy _enemy;
     [SerializeField] private float _spawnTime;
+
+    [SerializeField] private Transform _target;
 
     private bool _isOn = true;
     private float _startSpawnDeley = 0;
@@ -22,17 +23,9 @@ public class Spawner : MonoBehaviour
         while (_isOn)
         {
             Enemy enemy = Instantiate(_enemy, transform.position, Quaternion.identity);
-            enemy.SetMoveDirection(GetRandomDirection());
+            enemy.SetMoveTarget(_target);
 
             yield return waitForSecond;
         }
-    }
-
-    private Vector3 GetRandomDirection()
-    {
-        Vector3 direction = Random.insideUnitSphere.normalized;
-        direction.y = Vector3.zero.y;
-
-        return direction;
     }
 }

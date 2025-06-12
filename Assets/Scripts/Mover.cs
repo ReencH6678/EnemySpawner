@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
@@ -14,7 +12,7 @@ public class Mover : MonoBehaviour
     {
         if (Vector3.Distance(_targets[_targetIndex].position, transform.position) > _offset)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _targets[_targetIndex].position, _speed);
+            transform.position = Vector3.MoveTowards(transform.position, _targets[_targetIndex].position, _speed * Time.deltaTime);
         }
         else
         {

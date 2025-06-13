@@ -203,7 +203,7 @@ MonoBehaviour:
   _targets:
   - {fileID: 914203913}
   - {fileID: 846489170}
-  _speed: 0.03
+  _speed: 7
   _offset: 1
 --- !u!23 &455905783
 MeshRenderer:
@@ -398,7 +398,7 @@ MonoBehaviour:
   _targets:
   - {fileID: 914203913}
   - {fileID: 1240686657}
-  _speed: 0.03
+  _speed: 7
   _offset: 1
 --- !u!23 &734684956
 MeshRenderer:
@@ -809,7 +809,7 @@ MonoBehaviour:
   _targets:
   - {fileID: 1240686657}
   - {fileID: 864002440}
-  _speed: 0.03
+  _speed: 7
   _offset: 1
 --- !u!23 &1388578869
 MeshRenderer:

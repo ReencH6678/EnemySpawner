@@ -8,9 +8,9 @@ public class Mover : MonoBehaviour
 
     private int _targetIndex = 0;
 
-    void Update()
+    private void Update()
     {
-        if (Vector3.Distance(_targets[_targetIndex].position, transform.position) > _offset)
+        if ((_targets[_targetIndex].position - transform.position).sqrMagnitude > _offset)
         {
             transform.position = Vector3.MoveTowards(transform.position, _targets[_targetIndex].position, _speed * Time.deltaTime);
         }
